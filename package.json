@@ -1,0 +1,16 @@
+{
+  "name": "playerstatscard",
+  "version": "1.0.0",
+  "description": "A player stats card that allows users to select from a list of players to view the relevant stats of the player.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Lawrence Attoh",
+  "license": "MIT",
+  "devDependencies": {
+    "browser-sync": "^2.26.7",
+    "gulp": "^4.0.2",
+    "gulp-sass": "^4.0.2"
+  }
+}
