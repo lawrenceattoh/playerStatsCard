@@ -8,9 +8,50 @@
     <title>Player Stats Card</title>
 </head>
 <body>
-    <h1>Hello World</h1>
 
-    <h2>BrowserSync Rocks</h2>
+    <div class="TobyBG" id=Container> <!-- Container to hold everything -->
+  
+        <select id="myList" > <!-- Players option list -->
+           <option  value="">Select a player...</option>
+           <option class="blue" value="Toby">Toby Alderweireld</option>
+           <option value="Yaya">Yaya Touré</option>
+           <option value="Wayne">Wayne Rooney</option>  
+           <option value="Per">Per Mertesacker</option>
+           <option value="Riyad">Riyad Mahrez</option>
+        </select> 
+    
+        <div class="TobyBadge" id="badgeElement" > </div> <!--element to hold players team badge -->
+      
+      
+        <section id="bottomSection"> <!-- section for players info and stats -->
+            <!-- Toby's stats are default -->
+        
+            <header>
+                <span><span id="name" class="name_position">Toby Alderweireld</span> 
+                
+                <br>
+                
+                <span id="position" class="name_position"><h1> Defender</h1></span> </span>
+            </header>
+            
+            <br>
+            
+            <span class="box"><span><p>Appearances</p></span> <span id="appearances" class="data"> 80 </span> </span> 
+            
+            <br><br>
+            <!-- data elements -->
+            <span class="box"><span><p>Goals</p></span> <span id="goals" class="data"> <p>5 </p></span></span> <br><br>
+            <span class="box"><span><p>Assists</p></span> <span id="assists" class="data"><p> 2 </p></span></span> <br><br>
+            <span class="box"><span><p>Goals Per Match</p></span> <span id="goalsPerMatch" class="data"><p> 0.07 </p></span></span><br> <br>
+            <span class="box"><span><p>Passes Per Minute</p></span> <span id="passesPerMinute" class="data"><p> 0.26</p> </span> </span>
+        
+        </section>
+      
+    </div>
+    
+    <script src="js/index.js"></script>
+    
+    
 </body>
 
 </html>

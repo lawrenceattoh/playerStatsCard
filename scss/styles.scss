@@ -1,8 +1,241 @@
-$color: rgb(255, 187, 0);
+$color: rgb(12, 12, 32);
 
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
+/*-----------------------------------------------*/
+/* CSS RESET SHEET TO FACILIATE CROSS BROWSER COMPATIBILITY
+/*-----------------------------------------------*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+    vertical-align: baseline;
+    font-family: 'Montserrat', sans-serif;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
 body {
     color: #fff;
     background: $color;
-
-    height: 400vh;
+    line-height: 1;
+    font-family: 'Montserrat', sans-serif;
 }
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+} 
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*----------------------------------------------------*/
+/* THIS SECTION HOLDS THE LIST OFF PLAYERS
+/*----------------------------------------------------*/
+
+
+
+#Container {
+  position:relative; /*position the container relative so its child elements can have absolute positioning */
+  /*Specifiy dimensions of the app */
+  height:500px;
+  width:260px;
+  top:5em;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23); /*apply showdow with RGBA values to the whole app */
+  margin: 0 auto; /*center entire app */ 
+
+
+
+    #myList {
+        position:absolute;
+        top:12px;
+        height:7%;
+        width: 90%;
+        left: 0;  right: 0; /*player dropdown list is centered*/
+        margin: auto; /*player dropdown list is centered*/
+        background-color:rgba(234, 234, 234, 1);  
+    }
+
+    /*-----------------------------------------------*/
+    /* SECTION HOLDS BADGE PICTURE CLASSES FOR ALL PLAYERS
+    /*-----------------------------------------------*/
+    .TobyBadge{
+        position:absolute;
+        width:70px;
+        height:70px;
+        right:13px;
+        top:43%;
+        background-image:  url(http://itrox.co.uk/footballImages/players/TobyBadge2.png);
+        background-repeat: no-repeat;
+        background-size: 100% 100% ;
+        border-radius:50px;
+    }
+
+    .YayaBadge{
+        position:absolute;
+        width:70px;
+        height:70px;
+        right:13px;
+        top:43%;
+        background-image:  url(http://itrox.co.uk/footballImages/players/YayaBadge.png);
+        background-repeat: no-repeat;
+        background-size: 100% 100% ;
+        border-radius:50px;
+    }
+
+    .WayneBadge{
+        position:absolute;
+        width:70px;
+        height:70px;
+        right:13px;
+        top:43%;
+        background-image:  url(http://itrox.co.uk/footballImages/players/WayneBadge.png);
+        background-repeat: no-repeat;
+        background-size: 100% 100% ;
+        border-radius:50px;
+    }
+      
+    .PerBadge{
+        position:absolute;
+        width:70px;
+        height:70px;
+        right:13px;
+        top:43%;
+        background-image:  url(http://itrox.co.uk/footballImages/players/PerBadge.png);
+        background-repeat: no-repeat;
+        background-size: 100% 100% ;
+        border-radius:50px;
+    }
+    
+    .RiyadBadge{
+        position:absolute;
+        width:70px;
+        height:70px;
+        right:13px;
+        top:43%;
+        background-image:  url(http://itrox.co.uk/footballImages/players/RiyadBadge.png);
+        background-repeat: no-repeat;
+        background-size: 100% 100% ;
+        border-radius:50px;
+    }
+
+
+    
+}
+
+
+
+
+/*-----------------------------------------------*/
+/* SECTION HOLDS BACKGROUND PICTURE CLASSES FOR ALL PLAYERS
+/*-----------------------------------------------*/
+
+.TobyBG{  
+   
+  background-image:  url(http://itrox.co.uk/footballImages/players/TobyPS.png);
+  background-repeat: no-repeat;
+  background-size: 100% 50% ; 
+}
+
+.YayaBG{  
+  
+  background-image:  url(http://itrox.co.uk/footballImages/players/YayaPS.png);
+  background-repeat: no-repeat;
+  background-size: 100% 50% ; 
+}
+
+.WayneBG{  
+  
+  background-image:  url(http://itrox.co.uk/footballImages/players/WaynePS.png);
+  background-repeat: no-repeat;
+  background-size: 100% 50% ;
+    
+}
+
+.RiyadBG{  
+  
+  background-image:  url(http://itrox.co.uk/footballImages/players/RiyadPS.png);
+  background-repeat: no-repeat;
+  background-size: 100% 50% ;  
+}
+
+.PerBG{  
+  
+  background-image:  url(http://itrox.co.uk/footballImages/players/PerPS.png);
+  background-repeat: no-repeat;
+  background-size: 100% 50% ; 
+}
+
+
+
+/*dimenstions and positioning for the players info and stats section at the bottom */
+#bottomSection{
+  position:absolute;
+  top:50%;
+  width:100%; /*100% of containers width*/ 
+  height:50%; /*50% of containers height*/ 
+  z-index:-1000 !important;
+  background-color:rgba(236, 0, 79, 1);
+
+    /*Style players name and position text */
+    .name_position{
+        position:absolute;
+        left: 10px; 
+        top:15px;
+        color:rgba(251, 219, 227, 1);
+        
+    }
+    
+    /*Style just players position text */
+    #position{
+        top:40px;
+        font-size:12px;
+    }
+    
+    /*Style the players data */
+    .box{
+        position:absolute;
+        padding:9px;
+        left: 10px;  right: 10px;
+        margin-top:15%;
+        background-color:rgba(234, 234, 234, 1);
+        color:rgba(92, 57, 96, 1);  
+        font-size:12px;
+    }
+    
+    /*Style the players data on right side of the app */ 
+    .data{
+        position:absolute;
+        right:4%;
+        top:10px;
+        font-weight:bold;
+        color:rgba(57, 0, 61, 1);
+    }
+    
+  
+}
+
